@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio — Next.js
 
-## Getting Started
+Généré à partir de ton "Design System" (couleurs, typographie, boutons, champs)
+et de la maquette fournie.
 
-First, run the development server:
+## Installation
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ouvre http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Où modifier tes informations
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Tout est centralisé dans **`data/profile.ts`** :
+- `profile` → nom, rôle, phrase d'accroche, photo
+- `about` → texte de présentation + liste d'icônes de compétences (noms lucide-react)
+- `projects` → tes projets (titre, description, image, liens GitHub/démo)
+- `contact` → téléphone, email, localisation
+- `socials` → liens GitHub/Twitter/LinkedIn
+- `nav` → liens du menu
 
-## Learn More
+Tu n'as **aucun composant à toucher** pour changer le contenu — seulement ce fichier.
 
-To learn more about Next.js, take a look at the following resources:
+## Images
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Remplace les fichiers dans `public/images/` (actuellement des placeholders générés)
+par tes vraies photos/captures, en gardant les mêmes noms, ou change les chemins
+dans `data/profile.ts`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Design system appliqué
 
-## Deploy on Vercel
+Le projet utilise **Tailwind CSS v4** : il n'y a plus de `tailwind.config.ts`,
+toute la configuration (couleurs, tailles de texte, dégradé, radius) vit dans
+le bloc `@theme` en haut de `app/globals.css`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Couleurs : magenta `#DC00D3`, cyan `#0CFFFF`, fond `#100425`
+- Typographie : Josefin Sans (titres) + Inter (texte courant), chargées via `next/font` puis reliées au thème via `--font-heading` / `--font-body`
+- Bouton primaire : dégradé cyan → magenta, forme pill (`components/ui/Button.tsx`)
+- Champs de formulaire : états Normal / Active (focus) / Error (`components/ui/TextField.tsx`)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Pour ajuster une couleur ou une taille de police, modifie directement les
+variables dans le `@theme` de `app/globals.css` — pas besoin d'un autre fichier.
+
+## Structure
+
+```
+app/            → layout, page, styles globaux (+ tokens Tailwind v4 en @theme)
+components/     → Navbar, Hero, About, TechOrbit, RecentWork, ProjectCard, Contact, Footer
+components/ui/  → Button, TextField (design system)
+data/profile.ts → toutes tes infos personnelles
+public/images/  → tes visuels
+```

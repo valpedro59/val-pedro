@@ -1,26 +1,68 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ─────────────────────────────────────────────────────────
+   Tokens du Design System (remplace l'ancien tailwind.config.ts,
+   Tailwind v4 configure tout ici, en CSS).
+   ───────────────────────────────────────────────────────── */
+@theme {
+  /* Couleurs — fichier "01 Colors" */
+  --color-primary-magenta: #dc00d3;
+  --color-primary-cyan: #0cffff;
+  --color-primary-dark: #100425;
+  --color-secondary-bg: #f8f8f8;
+  --color-secondary-field: #fafafa;
+
+  /* Typographie — fichier "02 Typography" */
+  --font-heading: var(--font-josefin), serif;
+  --font-body: var(--font-inter), sans-serif;
+
+  --text-h1: 5.625rem; /* 90px */
+  --text-h1--line-height: 1.05;
+  --text-h1--letter-spacing: -0.45px;
+  --text-h1--font-weight: 700;
+
+  --text-h2: 4.125rem; /* 66px */
+  --text-h2--line-height: 1.1;
+  --text-h2--letter-spacing: -0.36px;
+  --text-h2--font-weight: 600;
+
+  --text-h3: 1.125rem; /* 18px */
+  --text-h3--line-height: 1.4;
+  --text-h3--letter-spacing: -0.29px;
+  --text-h3--font-weight: 400;
+
+  --text-body-1: 1.125rem; /* 18px / 30px */
+  --text-body-1--line-height: 1.9rem;
+
+  --text-body-2: 0.875rem; /* 14px / 30px */
+  --text-body-2--line-height: 1.9rem;
+
+  /* Boutons — fichier "03 Buttons" */
+  --background-image-gradient-primary: linear-gradient(90deg, #0cffff 0%, #dc00d3 100%);
+  --radius-pill: 999px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #100425;
+  color: #f8f8f8;
+}
+
+/* Champs de formulaire — états Normal / Active / Error du design system */
+.field {
+  @apply w-full rounded-lg bg-secondary-field/10 border border-white/10 px-4 py-3 text-sm text-white placeholder:text-white/40 outline-none transition-colors;
+}
+.field:focus {
+  @apply border-primary-cyan;
+}
+.field.field-error {
+  @apply border-red-400;
+}
+
+/* Halo décoratif derrière l'orbite de compétences */
+.orbit-glow {
+  background: radial-gradient(circle, rgba(220, 0, 211, 0.35) 0%, rgba(12, 255, 255, 0.15) 45%, transparent 70%);
 }
