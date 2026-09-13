@@ -7,9 +7,9 @@ export const profile = {
   name: "Val Clancy Pedro",
   role: "Fullstack Developer",
   tagline:
-    "Lead Dev & Architecte sur des projets web pensés pour le contexte congolais. Je conçois des interfaces propres et des architectures solides, du frontend au backend.",
+    "Developpeur Fullstack MERN sur des projets web pensés pour le contexte congolais. Je conçois des interfaces propres et des architectures solides, du frontend au backend.",
   ctaLabel: "Me contacter",
-  avatar: "/images/avatar.jpg", // remplace par ta photo (ratio portrait conseillé)
+  avatar: "/images/valpedro-profile.webp",
 };
 
 export const about = {
