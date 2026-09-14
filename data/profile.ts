@@ -40,37 +40,39 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    tag: "Featured Project",
-    title: "AgriCoop Connect",
+    tag: "Fullstack",
+    title: "Pharma Garde",
     description:
-      "Dashboard de digitalisation pour la coopérative agricole COMAKI (Kintélé). Suivi des ventes, animations CSS, refonte mobile-first et backend Python.",
-    image: "/images/project-agricoop.jpg",
-    repoUrl: "https://github.com/valpedro59",
+      "Application web permettantn aux utilisateurs de rechercher des pharmacies de garde de jour ou de nuit. Frontend en React avec tailwindcss mobile-first et backend Node Express Postgre SQL Supabase Prisma.",
+    image: "/images/project-pharma.png",
+    repoUrl: "https://github.com/valpedro59/pharmagarde",
+    liveUrl: "https://valpedro59.github.io/budget-manager/",
   },
   {
-    tag: "Featured Project",
+    tag: "Frontend",
     title: "BudgetFast",
     description:
       "Gestionnaire de budget en JavaScript vanilla. Persistance localStorage, audit de conformité et documentation complète.",
-    image: "/images/project-budgetfast.jpg",
+    image: "/images/project-budgetfast.png",
     repoUrl: "https://github.com/valpedro59/budget-manager",
+    liveUrl: "https://valpedro59.github.io/budget-manager/",
   },
   {
-    tag: "Featured Project",
-    title: "Festival Sapé & Lumière",
+    tag: "Frontend",
+    title: "Anita Orchidee Group",
     description:
-      "Site événementiel pour un festival culturel fictif à Brazzaville. Hero éditorial, mobile-first en 100svh et compte à rebours JS.",
-    image: "/images/project-festival.jpg",
+      "Site vitrine de l'agence Anita Orchidee Group , qui presente ses services et donne l'acces a l'utilisateur de laisser un message grace au formulaire de contact.",
+    image: "/images/project-aog.png",
     repoUrl: "https://github.com/valpedro59/budget-manager",
+    liveUrl: "https://anitaorchideegroupe.fr/",
   },
   {
-    tag: "Featured Project",
-    title: "Inventory Logistics API",
+    tag: "Backend",
+    title: "Subscription Tracker API",
     description:
-      "API RESTful de gestion de stock (RBAC, audit, logistique) construite en Node.js, Express, TypeScript et MongoDB.",
-    image: "/images/project-inventory.jpg",
-    repoUrl: "https://github.com/valpedro59/budget-manager",
-    liveUrl: "",
+      "API RESTful de gestion d'abonnements (Websocket, notifications, reabonnement) construite en Node.js, Express, et MongoDB.",
+    image: "/images/project-subscription.png",
+    repoUrl: "https://github.com/valpedro59/subscription-tracker",
   },
 ];
 

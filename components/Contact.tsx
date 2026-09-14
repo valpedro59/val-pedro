@@ -38,7 +38,9 @@ export default function Contact() {
 
       <div className="mx-auto mt-16 grid max-w-5xl gap-12 sm:grid-cols-2">
         <div>
-          <h3 className="font-heading text-xl text-white">{contact.subtitle}</h3>
+          <h3 className="font-heading text-xl text-white">
+            {contact.subtitle}
+          </h3>
           <p className="mt-4 text-body-2 text-white/70">{contact.intro}</p>
 
           <ul className="mt-8 space-y-4 text-sm text-white/80">
@@ -49,18 +51,30 @@ export default function Contact() {
               <Mail size={18} className="text-primary-cyan" /> {contact.email}
             </li>
             <li className="flex items-center gap-3">
-              <MapPin size={18} className="text-primary-cyan" /> {contact.location}
+              <MapPin size={18} className="text-primary-cyan" />{" "}
+              {contact.location}
             </li>
           </ul>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-5">
-          <TextField name="name" label="Name" placeholder="Insert your name here..." error={errors.name} />
-          <TextField name="email" type="email" label="Email" placeholder="you@example.com" error={errors.email} />
+          <TextField
+            name="name"
+            label="Name"
+            placeholder="Inserer votre nom ici..."
+            error={errors.name}
+          />
+          <TextField
+            name="email"
+            type="email"
+            label="Email"
+            placeholder="val@example.com"
+            error={errors.email}
+          />
           <TextField
             name="message"
             label="Message"
-            placeholder="How can I help?"
+            placeholder="Comment puis-je vous aider?"
             multiline
             error={errors.message}
           />
