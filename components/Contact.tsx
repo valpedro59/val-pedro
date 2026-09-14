@@ -60,7 +60,7 @@ export default function Contact() {
         <form onSubmit={handleSubmit} className="space-y-5">
           <TextField
             name="name"
-            label="Name"
+            label="Nom"
             placeholder="Inserer votre nom ici..."
             error={errors.name}
           />
