@@ -7,7 +7,7 @@ export const profile = {
   name: "Val Clancy Pedro",
   role: "Fullstack Developer",
   tagline:
-    "Developpeur Fullstack MERN sur des projets web pensés pour le contexte congolais. Je conçois des interfaces propres et des architectures solides, du frontend au backend.",
+    "Développeur Fullstack MERN | Concepteur d'interfaces fluides et d'architectures web solides, du front au back.",
   ctaLabel: "Me contacter",
   avatar: "/images/valpedro-profile.webp",
 };
@@ -15,7 +15,7 @@ export const profile = {
 export const about = {
   title: "About",
   paragraph:
-    "Développeur fullstack cumulant 4 ans d'experience au Maroc apres l'obtention de mon diplome universitaire, basé dans l'architecture de Javascript avec ses framework comme React/Nextjs pour le frontEnd, Nodejs avec Express pour le Backend et pour les bases de donnees MongoDB ou Postgre avec Prisma. Je suis aussi habile dans la gestion des rôles en equipe, des dépôts GitHub et prends les décisions d'architecture front comme back. Je construis des applications concrètes et utilisables : coopératives agricoles, gestion de tontine, pharmacies de garde. En dehors du code, j'aime explorer des outils numériques pensés pour le Congo.",
+    "Développeur Fullstack React/Next.js & Node.js avec 4 ans d'expérience. Spécialisé dans l'architecture web et les bases de données (MongoDB, PostgreSQL), je conçois des applications concrètes et utiles (coopératives, santé, finance locale) en me concentrant sur le développement de solutions numériques adaptées aux réalités africaines.",
   // Icônes de compétences (noms lucide-react)
   skills: [
     "Code2",

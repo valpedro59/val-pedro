@@ -7,7 +7,7 @@ export default function About() {
       <h2 className="bg-gradient-primary bg-clip-text font-heading text-3xl font-semibold text-transparent sm:text-h2">
         {about.title}
       </h2>
-      <p className="mx-auto mt-8 max-w-2xl text-body-2 text-white/70">
+      <p className="mx-auto mt-8 max-w-3xl text-body-2 text-white/70">
         {about.paragraph}
       </p>
 

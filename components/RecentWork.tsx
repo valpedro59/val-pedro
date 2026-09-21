@@ -15,7 +15,11 @@ export default function RecentWork() {
 
       <div className="mx-auto mt-16 flex max-w-5xl flex-col gap-16">
         {projects.map((project, i) => (
-          <ProjectCard key={project.title} project={project} reverse={i % 2 === 1} />
+          <ProjectCard
+            key={project.title}
+            project={project}
+            reverse={i % 2 === 1}
+          />
         ))}
       </div>
     </section>
