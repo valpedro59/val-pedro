@@ -43,10 +43,10 @@ export const projects: Project[] = [
     tag: "Fullstack",
     title: "Pharma Garde",
     description:
-      "Application web permettantn aux utilisateurs de rechercher des pharmacies de garde de jour ou de nuit. Frontend en React avec tailwindcss mobile-first et backend Node Express Postgre SQL Supabase Prisma.",
+      "Application web permettantn aux utilisateurs de rechercher des pharmacies de garde de jour ou de nuit. Frontend en React avec tailwindcss mobile-first et backend Node Express Postgre SQL Supabase Drizzle.",
     image: "/images/project-pharma.png",
-    repoUrl: "https://github.com/valpedro59/pharmagarde",
-    liveUrl: "https://valpedro59.github.io/budget-manager/",
+    repoUrl: "https://github.com/valpedro59/pharma-garde",
+    liveUrl: "https://farma-de-garde.netlify.app",
   },
   {
     tag: "Frontend",
